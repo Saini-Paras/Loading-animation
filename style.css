@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    
+}
+html{
+    /* font-size: 170%; */
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: formAnimation .8s cubic-bezier(0,.34,.47,1.4) ;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    width: 20rem;
+    height: 22rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 55;
+}
+input{
+    font-size: 1.1rem;
+    padding: .8rem;
+    margin: .7rem 0;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid ;
+}
+button{
+    border: none;
+    color: #fff;
+    background-color: #252525;
+    padding: .7rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: .7rem;
+    font-size: 1.1rem;
+}
+button:hover{
+    opacity: .9;
+}
+h1{
+    font-family: 'Poor Story', cursive;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 3rem;
+}
+
+@keyframes formAnimation{
+    0%{
+        transform:  translateY(-8.5rem) ;
+        opacity: 0;
+        
+    }
+    80%{
+        transform:  translateY(1.5rem) ;
+    }
+    100%{
+        transform: translateY(0)  ;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        
+    }
+
+}
+
+
+/* loader============ */
+.loader-animation{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #252525;
+    transition: all .5s;
+    animation: loader 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+
+
+@keyframes loader {
+    0%{
+        transform: scale(.1) translateY(-70rem);
+
+    }
+    30%{
+        transform: scale(.5) translateY(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(26);
+    }
+}
+
+
